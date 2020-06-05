@@ -1,68 +1,83 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import FusionCharts from 'fusioncharts';
-import Charts from 'fusioncharts/fusioncharts.charts';
-import ReactFC from 'react-fusioncharts';
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import React from "react";
+import ReactApexChart from 'react-apexcharts';
+import './ApexChart.scss'
 
-ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
-
-const chartConfigs = {
-  type: 'column2d',
-  width: 600,
-  height: 400,
-  dataFormat: 'json',
-  dataSource: {
-    "chart": {
-      "caption": "State Wise Covid stats",
-      "subCaption": "In MMbbl = One Million barrels",
-      "xAxisName": "Stats",
-      "yAxisName": "Number of People",
-      "theme": "fusion"
-      
-    },
-    "data": [
-      {
-        "label": "Venezuela",
-        "value": "290"
-      },
-      {
-        "label": "Saudi",
-        "value": "260"
-      },
-      {
-        "label": "Canada",
-        "value": "180"
-      },
-      {
-        "label": "Iran",
-        "value": "140"
-      },
-      {
-        "label": "Russia",
-        "value": "115"
-      },
-      {
-        "label": "UAE",
-        "value": "100"
-      },
-      {
-        "label": "US",
-        "value": "30"
-      },
-      {
-        "label": "China",
-        "value": "30"
+function Graph(props){
+    console.log(props.alldata.cases_time_series[props.alldata.cases_time_series.length-1].date)
+  
+const series= [{
+        theme: 'fusion',
+        name: 'Total Confirmed',
+        data: [
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-1].totalconfirmed,
+           
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-12].totalconfirmed,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-20].totalconfirmed,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-28].totalconfirmed,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-35].totalconfirmed,
+        ]
+      }, {
+        name: 'Total Recovered',
+        data: [
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-1].totalrecovered,
+           
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-12].totalrecovered,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-20].totalrecovered,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-28].totalrecovered,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-35].totalrecovered,
+        ] 
+      },{
+        name: 'Total Deaths',
+        data: [
+          props.alldata.cases_time_series[props.alldata.cases_time_series.length-1].totaldeceased,
+            
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-12].totaldeceased,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-20].totaldeceased,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-28].totaldeceased,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-35].totaldeceased,
+        ]
       }
-    ]
-  },
-};
+    ];
+      const options={  
+      chart: {
+    
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth',
+        
+      },
+      xaxis: {
+        type: 'datetime',
+        categories: [
+            new Date().toGMTString().slice(5,12),
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-12].date,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-20].date,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-28].date,
+            props.alldata.cases_time_series[props.alldata.cases_time_series.length-35].date,
+        ]
+      },
+      tooltip: {
+        x: {
+          format: 'dd MMM',
+          
+        },
+      }
+    }
 
-class ApexChart extends Component {
-  render (props) {
-      console.log(this.props)
-    return <ReactFC statewis={this.props.statewis} {...chartConfigs} />;
-  }
+      return(
+          <div style={{backgroundColor: "white", textAlign: "center"}}>
+              <br/>
+              <h2 style={{fontWeight:'400'}}>All India Covid Stats Graphical Representation</h2>
+              <br />
+              <div className="Apex">
+              <ReactApexChart options={options} series={series} type="area" height={250} style={{width:"60%"}} />              
+              <ReactApexChart options={options} series={series} type="bar" height={250} style={{width:"60%"}} />
+              </div>
+          </div>
+      )
 }
 
-export default ApexChart
+export default Graph;

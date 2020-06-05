@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 // import Cards from './component/Cards/Cards'
 // import Chart from './component/Chart/Chart'
-import CountryPicker from './component/CountryPicker/CountryPicker'
 import './App.module.css'
 import FormControl from '@material-ui/core/FormControl';
 import { Select, MenuItem, InputLabel } from '@material-ui/core'
 import Cards from './component/Cards/Cards';
 import Charts from './component/Chart/Charts';
 import ApexChart from './component/Apexchart/ApexChart';
+import ChartComp from './component/ChartsComp/ChartsComp';
 
 
 
@@ -109,10 +109,11 @@ export class App extends Component {
       <div className="container">
         
          <Cards statewis={this.state.statewis} selectedstate={this.state.selectedstate} statewise={this.state.statedata}/>  
-
-        <FormControl>
-          <InputLabel id="demo-simple-select-label">State</InputLabel>
-          <Select labelId="demo-simple-select-label"
+        <div className="state-selector">
+          <h2 style={{textAlign:"center"}}>Select State</h2>
+        <FormControl style={{display:'flex',flexDirection:'column',alignItems:"center", marginBottom:"2vh"}}>
+          {/* <InputLabel style={{}} id="demo-simple-select-label">State</InputLabel> */}
+          <Select style={{width:"50vw"}} labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={this.selectedstate}
             onChange={this.handleChange}>
@@ -128,9 +129,10 @@ export class App extends Component {
           </Select>
           
         </FormControl> 
-        
-        {/* <ApexChart statewise={this.state.statedata} statewis={this.state.statewis}/> */}
-          <Charts className="chart" alldata={this.state.allstates} statewise={this.state.statedata} /> 
+        </div>
+        {/* <ChartComp/> */}
+       <ApexChart statewise={this.state.statedata} alldata={this.state.allstates} statewis={this.state.statewis}/>
+          {/* <Charts className="chart" alldata={this.state.allstates} statewise={this.state.statedata} />  */}
       </div>
     )
   }

@@ -1,45 +1,42 @@
-import React, {Component} from 'react';
-import {Bar, Line, Pie} from 'react-chartjs-2';
-import { yellow } from '@material-ui/core/colors';
+import React from 'react';
+import {Line, Bar} from 'react-chartjs-2';
 
-class ChartComp extends Component{
-state={
-    chartData:{
-        
+const state = {
+  labels: ['January', 'February', 'March',
+           'April', 'May'],
+  datasets: [
+    {
+      label: 'Rainfall',
+      fill: false,
+      lineTension: 0.5,
+      backgroundColor: 'rgba(75,192,192,1)',
+      borderColor: 'rgba(0,0,0,1)',
+      borderWidth: 2,
+      data: [65, 59, 80, 81, 56]
     }
-}
-render(){
-    return(
-        <div className="chart">
-            <Bar
-                data={
-                    labels=['Confirmed','Active','Recovered','Deaths'],
-                datasets=[
-                     {
-                        label:'Number of People',
-                        data:[
-                         617594,
-                         181045,
-                         153060,
-                         105162   
-                            ]
-                    },
-                    backgrounfColor=[
-                        '#ef5350','#4caf50','#eeff41','#0277bd'
-                    ]
-                ]
-                }
-                width={100}
-                height={50}
-                options={{
-                    maintainAspectRatio: false
-                }}
-            />
-        </div>
-    )
+  ]
 }
 
-
+ class ChartComp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Bar
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
+    );
+  }
 }
-
 export default ChartComp;

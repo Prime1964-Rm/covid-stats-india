@@ -20,7 +20,7 @@ function Cards(props) {
         <div className={styles.container}>
             <Grid container spacing={4} justify="center">
                 <Grid item component={Card} xs={12} md={2} className={cx(styles.card,styles.confirmed)}>
-                    <CardContent>
+                    <CardContent >
                         <Typography color="textSecondary" gutterBottom>Confirmed</Typography>
                         <Typography variant="h5">
                             <CountUp style={{color: 'slateblue'}}
