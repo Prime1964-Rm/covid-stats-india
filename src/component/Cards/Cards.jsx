@@ -54,7 +54,7 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography >{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
+                        <Typography >{new Date().toGMTString().slice(5,17)}</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={2} className={cx(styles.card,styles.recovered)}>
@@ -70,7 +70,7 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography >{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
+                        <Typography >{new Date().toGMTString().slice(5,17)}</Typography>
                         <Typography  gutterBottom>Recovered Today</Typography>
                         <Typography variant="body2">
                         <CountUp    style={{color: '#00e658'}}
@@ -95,7 +95,7 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography >{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
+                        <Typography >{new Date().toGMTString().slice(5,17)}</Typography>
                         <Typography  gutterBottom>Died Today</Typography>
                         <Typography variant="body2">
                         <CountUp style={{color: '#f44336'}}
