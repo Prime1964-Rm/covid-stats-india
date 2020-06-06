@@ -21,7 +21,7 @@ function Cards(props) {
             <Grid container spacing={4} justify="center">
                 <Grid item component={Card} xs={12} md={2} className={cx(styles.card,styles.confirmed)}>
                     <CardContent >
-                        <Typography color="textSecondary" gutterBottom>Confirmed</Typography>
+                        <Typography  gutterBottom>Confirmed</Typography>
                         <Typography variant="h5">
                             <CountUp style={{color: 'slateblue'}}
                                 start={0}
@@ -30,8 +30,8 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
-                        <Typography color="textSecondary" gutterBottom>Confirmed Today</Typography>
+                        <Typography >{new Date().toGMTString().slice(5,17)}</Typography>
+                        <Typography  gutterBottom>Confirmed Today</Typography>
                         <Typography variant="body2">
                             <CountUp style={{color: 'slateblue'}}
                                 start={0}
@@ -45,7 +45,7 @@ function Cards(props) {
                 </Grid>
                 <Grid item component={Card} xs={12} md={2} className={cx(styles.card,styles.active)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>Active</Typography>
+                        <Typography  gutterBottom>Active</Typography>
                         <Typography variant="h5">
                             <CountUp style={{color: '#42a5f5'}}
                                 start={0}
@@ -54,12 +54,12 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
+                        <Typography >{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={2} className={cx(styles.card,styles.recovered)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>
+                        <Typography  gutterBottom>
                             Recovered
                         </Typography>
                         <Typography variant="h5">
@@ -70,8 +70,8 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
-                        <Typography color="textSecondary" gutterBottom>Recovered Today</Typography>
+                        <Typography >{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
+                        <Typography  gutterBottom>Recovered Today</Typography>
                         <Typography variant="body2">
                         <CountUp    style={{color: '#00e658'}}
                                 start={0}
@@ -84,7 +84,7 @@ function Cards(props) {
                 </Grid>
                 <Grid item component={Card} xs={12} md={2} className={cx(styles.card,styles.deaths)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>
+                        <Typography  gutterBottom>
                             Deaths
                         </Typography>
                         <Typography variant="h5">
@@ -95,8 +95,8 @@ function Cards(props) {
                                 seperator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
-                        <Typography color="textSecondary" gutterBottom>Died Today</Typography>
+                        <Typography >{(props.statewise[0].lastupdatedtime).slice(0, 10)}</Typography>
+                        <Typography  gutterBottom>Died Today</Typography>
                         <Typography variant="body2">
                         <CountUp style={{color: '#f44336'}}
                                 start={0}

@@ -109,7 +109,7 @@ export class App extends Component {
       <div className="container">
         
          <Cards statewis={this.state.statewis} selectedstate={this.state.selectedstate} statewise={this.state.statedata}/>  
-        <div className="state-selector">
+        <div className="state-selector" >
           <h2 style={{textAlign:"center"}}>Select State</h2>
         <FormControl style={{display:'flex',flexDirection:'column',alignItems:"center", marginBottom:"2vh"}}>
           {/* <InputLabel style={{}} id="demo-simple-select-label">State</InputLabel> */}
