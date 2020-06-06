@@ -2,6 +2,7 @@
   "name": "covidstat",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Prime1964-Rm.github.io/covid-stats-india/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -13,6 +14,7 @@
     "classnames": "^2.2.6",
     "countup": "^1.8.2",
     "fusioncharts": "^3.15.1-sr.1",
+    "gh-pages": "^3.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-apexcharts": "^1.3.7",
@@ -25,6 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
