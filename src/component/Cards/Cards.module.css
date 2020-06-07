@@ -7,26 +7,27 @@
     margin:5% 2% !important;
     padding-top: 50px;
     background-color: #263238;
+    border-radius: 50px;
     
 }
 
 .confirmed{
-    border-bottom:  10px solid slateblue;
+    border:  10px solid slateblue;
     color: slateblue;
 }
 
 .active{
-    border-bottom: 10px solid #42a5f5;
-    color: #42a5f5;
+    border: 10px solid #42a5f5;
+    color: #2196f3;
 }
 
 .recovered{
-    border-bottom: 10px solid  #00e658;
+    border: 10px solid  #00e658;
     color: #00e658ce;
 }
 
 .deaths{
-    border-bottom: 10px solid #f44336;
+    border: 10px solid #f44336;
     color: #f44336;
 }
 
