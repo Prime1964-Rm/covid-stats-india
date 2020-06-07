@@ -18,8 +18,8 @@ function Cards(props) {
 
     return (
         <div className={styles.container}>
-            <Grid container spacing={4} justify="center">
-                <Grid style={{borderRadius:"50px",backgroundColor: "#ede7f6"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.confirmed)}>
+            <Grid container spacing={4} style={{backgroundColor: "#37474f"}} justify="center">
+                <Grid style={{borderRadius:"20px",backgroundColor: "#ede7f6"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.confirmed)}>
                     <CardContent >
                         <Typography  gutterBottom>Confirmed</Typography>
                         <Typography variant="h5">
@@ -43,7 +43,7 @@ function Cards(props) {
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid style={{borderRadius:"50px",backgroundColor:"#e3f2fd"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.active)}>
+                <Grid style={{borderRadius:"20px",backgroundColor:"#e3f2fd"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.active)}>
                     <CardContent>
                         <Typography  gutterBottom>Active</Typography>
                         <Typography variant="h5">
@@ -57,7 +57,7 @@ function Cards(props) {
                         <Typography >{new Date().toGMTString().slice(5,17)}</Typography>
                     </CardContent>
                 </Grid>
-                <Grid style={{borderRadius:"50px", backgroundColor:"#e8f5e9"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.recovered)}>
+                <Grid style={{borderRadius:"20px", backgroundColor:"#e8f5e9"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.recovered)}>
                     <CardContent>
                         <Typography  gutterBottom>
                             Recovered
@@ -82,7 +82,7 @@ function Cards(props) {
                         </Typography>
                     </CardContent>
                 </Grid>
-                <Grid style={{borderRadius:"50px", backgroundColor:"#ffebee"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.deaths)}>
+                <Grid style={{borderRadius:"20px", backgroundColor:"#ffebee"}} item component={Card} xs={12} md={2} className={cx(styles.card,styles.deaths)}>
                     <CardContent>
                         <Typography  gutterBottom>
                             Deaths
