@@ -1,5 +1,7 @@
 body{
+  margin-top: 0;
   background-color: rgb(250, 250, 250);
+  font-family: 'Exo 2', sans-serif;
 }
 
 .container{

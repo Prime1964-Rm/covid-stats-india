@@ -70,7 +70,7 @@ const series= [{
       return(
           <div style={{backgroundColor: "white", textAlign: "center"}}>
               <br/>
-              <h2 style={{fontWeight:'400'}}>All India Covid Stats Graphical Representation</h2>
+              <h2 style={{fontWeight:'800'}}>All India Covid Stats Graphical Representation</h2>
               <br />
               <div className="Apex">
               <ReactApexChart options={options} series={series} type="area" height={250} style={{width:"60%"}} />              

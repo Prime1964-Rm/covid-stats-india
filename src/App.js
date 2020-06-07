@@ -108,12 +108,11 @@ export class App extends Component {
     return (
       <div className="container">
         
-         <Cards statewis={this.state.statewis} selectedstate={this.state.selectedstate} statewise={this.state.statedata}/>  
-        <div className="state-selector" >
-          <h2 style={{textAlign:"center"}}>Select State</h2>
-        <FormControl style={{display:'flex',flexDirection:'column',alignItems:"center", marginBottom:"2vh"}}>
+        <div className="state-selector" style={{marginBottom:"5vh",padding:"2vh", backgroundColor:"#18ffff",position:'sticky', top: '0px'}} >
+          <h2 style={{textAlign:"center", backgroundColor:"#18ffff",fontWeight:'800'}}>Select State</h2>
+        <FormControl style={{display:'flex',flexDirection:'column',alignItems:"center", backgroundColor:"#18ffff", marginBottom:"2vh"}}>
           {/* <InputLabel style={{}} id="demo-simple-select-label">State</InputLabel> */}
-          <Select style={{width:"50vw"}} labelId="demo-simple-select-label"
+          <Select  style={{width:"50vw",textAlign:"center",borderBottom:"none",borderRadius:"50px",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",backgroundColor:"#eeeeee"}} labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={this.selectedstate}
             onChange={this.handleChange}>
@@ -121,7 +120,7 @@ export class App extends Component {
           {
              
              this.state.allstates.statewise.map(function(item, i){
-              return <MenuItem value={item.state} >{item.state}</MenuItem>
+              return <MenuItem style={{padding:"1vh"}} value={item.state} >{item.state}</MenuItem>
             })
          
         }
@@ -130,6 +129,7 @@ export class App extends Component {
           
         </FormControl> 
         </div>
+        <Cards statewis={this.state.statewis} selectedstate={this.state.selectedstate} statewise={this.state.statedata}/>  
         {/* <ChartComp/> */}
        <ApexChart statewise={this.state.statedata} alldata={this.state.allstates} statewis={this.state.statewis}/>
           {/* <Charts className="chart" alldata={this.state.allstates} statewise={this.state.statedata} />  */}
