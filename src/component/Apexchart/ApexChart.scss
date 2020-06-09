@@ -1,7 +1,14 @@
 .Apex{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-around;
 }
+
+@media only screen and (max-width: 600px) {
+    .Apex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+  }

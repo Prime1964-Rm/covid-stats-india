@@ -73,8 +73,8 @@ const series= [{
               <h2 style={{fontWeight:'800'}}>All India Covid Stats Graphical Representation</h2>
               <br />
               <div className="Apex">
-              <ReactApexChart options={options} series={series} type="area" height={250} style={{width:"60%",padding:"1vw",marginBottom:"5vh",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}} />              
-              <ReactApexChart options={options} series={series} type="bar" height={250} style={{width:"60%",padding:"1vw",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}} />
+              <ReactApexChart  options={options} series={series} type="area" height={250} style={{width:"45%",padding:"1vw",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}} />              
+              <ReactApexChart options={options} series={series} type="bar" height={250} style={{width:"45%",padding:"1vw",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}} />
               </div>
           </div>
       )
