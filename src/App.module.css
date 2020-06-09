@@ -10,6 +10,8 @@ body{
   align-items: center;
   justify-content: center;
   background-color: black;
+  border: 5px solid black;
+
 }
 
 .state-selector{
@@ -18,5 +20,5 @@ body{
   justify-content: center;
   background-color: blue;
   width: 100%;
-  border: 1px solid black;
+  
 }

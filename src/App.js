@@ -106,9 +106,9 @@ export class App extends Component {
     
     // console.log(this.state.allstates.statewise[this.state.allstates.statewise.length].active)
     return (
-      <div className="container">
+      <div className="container" >
         
-        <div className="state-selector" style={{padding:"2vh", backgroundColor:"#18ffff",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",position:'sticky', top: '0px'}} >
+        <div className="state-selector" style={{padding:"2vh",zIndex:"1",  backgroundColor:"#18ffff",boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",position:'sticky', top: '0px'}} >
           <h2 style={{textAlign:"center", backgroundColor:"#18ffff",fontWeight:'800'}}>Select State</h2>
         <FormControl style={{display:'flex',flexDirection:'column',alignItems:"center", backgroundColor:"#18ffff", marginBottom:"2vh"}}>
           {/* <InputLabel style={{}} id="demo-simple-select-label">State</InputLabel> */}
