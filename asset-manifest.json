@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/covid-stats-india/static/css/main.ccb18fa8.chunk.css",
+    "main.css": "/covid-stats-india/static/css/main.5f9015b5.chunk.css",
     "main.js": "/covid-stats-india/static/js/main.e5cccc7d.chunk.js",
     "main.js.map": "/covid-stats-india/static/js/main.e5cccc7d.chunk.js.map",
     "runtime-main.js": "/covid-stats-india/static/js/runtime-main.0a51cd73.js",
@@ -8,15 +8,15 @@
     "static/js/2.14ba0e2c.chunk.js": "/covid-stats-india/static/js/2.14ba0e2c.chunk.js",
     "static/js/2.14ba0e2c.chunk.js.map": "/covid-stats-india/static/js/2.14ba0e2c.chunk.js.map",
     "index.html": "/covid-stats-india/index.html",
-    "precache-manifest.c96d5e0797bb3bfddb35cba443576d6f.js": "/covid-stats-india/precache-manifest.c96d5e0797bb3bfddb35cba443576d6f.js",
+    "precache-manifest.8ccfa3e5641044bba23eb6e8ba4b551f.js": "/covid-stats-india/precache-manifest.8ccfa3e5641044bba23eb6e8ba4b551f.js",
     "service-worker.js": "/covid-stats-india/service-worker.js",
-    "static/css/main.ccb18fa8.chunk.css.map": "/covid-stats-india/static/css/main.ccb18fa8.chunk.css.map",
+    "static/css/main.5f9015b5.chunk.css.map": "/covid-stats-india/static/css/main.5f9015b5.chunk.css.map",
     "static/js/2.14ba0e2c.chunk.js.LICENSE.txt": "/covid-stats-india/static/js/2.14ba0e2c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0a51cd73.js",
     "static/js/2.14ba0e2c.chunk.js",
-    "static/css/main.ccb18fa8.chunk.css",
+    "static/css/main.5f9015b5.chunk.css",
     "static/js/main.e5cccc7d.chunk.js"
   ]
 }
